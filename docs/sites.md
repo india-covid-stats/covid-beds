@@ -9,3 +9,4 @@ Durg           | https://durg.gov.in/covidbedsdurg/
 Madhya Pradesh | http://sarthak.nhmmp.gov.in/covid/facility-bed-occupancy-dashboard/
 Telengana      | http://164.100.112.24/SpringMVC/Hospital_Beds_Statistic_Bulletin_citizen.htm
 Andhra Pradesh | http://dashboard.covid19.ap.gov.in/ims/hospbed_reports/
+Solapur        | http://117.247.89.137:85/
