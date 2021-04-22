@@ -1,0 +1,31 @@
+#!/bin/sh
+
+curl -s "https://stopcorona.tn.gov.in/beds.php" |
+	sed -E  -n '
+	/<th scope="row">/{
+	n
+	s/.*<td>(.*)<\/td>.*/Region: \1/p
+	n
+	s/.*<td>(.*)<\/td>.*/Hospital: \1/p
+	n
+	s/.*<td>(.*)<\/td>.*/Total: \1/p
+	n
+	s/.*<td>(.*)<\/td>.*/Occupied: \1/p
+	n
+	s/.*<td>(.*)<\/td>.*/Vacant: \1/p
+	n
+	n
+	n
+	n
+	n
+	n
+	n
+	n
+	n
+	n
+	n
+	n
+	n
+	s/.*<td>(.*)<\/td>.*/Update: \1\n/p
+	}
+	'
