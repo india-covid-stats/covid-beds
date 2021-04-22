@@ -6,3 +6,4 @@ Karnataka  | https://bbmpgov.com/chbms/
 Tamil Nadu | https://stopcorona.tn.gov.in/beds.php
 Nagpur     | https://nsscdcl.org/covidbeds/
 Durg       | https://durg.gov.in/covidbedsdurg/		
+Madhya Pradesh | http://sarthak.nhmmp.gov.in/covid/facility-bed-occupancy-dashboard/
