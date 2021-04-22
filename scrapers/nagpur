@@ -1,6 +1,6 @@
 #!/bin/sh
 rm -rf AvailableHospitals*
-curl https://nsscdcl.org/covidbeds/AvailableHospitals.jsp > AvailableHospitals.html
+curl -s https://nsscdcl.org/covidbeds/AvailableHospitals.jsp > AvailableHospitals.html
 sed -i '/table/,$!d' AvailableHospitals.html
 w3m AvailableHospitals.html > nagpurfinal && cat nagpurfinal
 rm -rf nagpurfinal
