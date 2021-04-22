@@ -1,0 +1,7 @@
+#!/bin/sh
+
+curl -s "https://nsscdcl.org/covidbeds/AvailableHospitals.jsp" |
+	sed  -E '
+	/<tr><td>/!d
+	s_.*</td><td>([^<]+)</td><td>([^<]*)</td><td>([^<]*)</td><td>([^<]*)</td><td>([^<]*).*_Hospital: \1\nO2: \2\nNonO2: \3\nICU: \4\nVentilator: \5\n_
+	'
