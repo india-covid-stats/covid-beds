@@ -12,3 +12,4 @@ Andhra Pradesh | http://dashboard.covid19.ap.gov.in/ims/hospbed_reports/
 Delhi          | https://coronabeds.jantasamvad.org/beds.html
 Solapur        | http://117.247.89.137:85/
 Gujarat        | https://www.gujaratcovidsupport.org/
+Kerala         | https://covid19jagratha.kerala.nic.in/home/addHospitalDashBoard
