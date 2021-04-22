@@ -1,0 +1,7 @@
+#!/bin/sh
+rm -rf AvailableHospitals*
+wget -q https://nsscdcl.org/covidbeds/AvailableHospitals.jsp
+mv AvailableHospitals.jsp AvailableHospitals.html
+sed -i '/table/,$!d' AvailableHospitals.html
+w3m AvailableHospitals.html > nagpurfinal && cat nagpurfinal
+rm -rf nagpurfinal
