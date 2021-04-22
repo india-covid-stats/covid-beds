@@ -11,4 +11,3 @@ Telengana      | http://164.100.112.24/SpringMVC/Hospital_Beds_Statistic_Bulleti
 Andhra Pradesh | http://dashboard.covid19.ap.gov.in/ims/hospbed_reports/
 Delhi          | https://coronabeds.jantasamvad.org/beds.html
 Solapur        | http://117.247.89.137:85/
-Gujarat        | https://www.gujaratcovidsupport.org/
