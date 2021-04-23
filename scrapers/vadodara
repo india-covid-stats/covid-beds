@@ -19,5 +19,5 @@ curl -s "https://vmc.gov.in/Covid19VadodaraApp/HospitalBedsDetails.aspx?tid=$tid
 s/<[^>]*>/:/g
 s/::*/:/g
 s/^[[:space:]]*://
-s/^([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):.*/Hospital: \1\nAddress: \2\nTotal: \3\nOccupied: \4\nVacant: \5\nNodal Officer Name: \6\nMobile No: \7\n/'
+s/^([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):.*/Hospital: \1\nAddress: \2\nTotal: \3\nOccupied: \4\nVacant: \5\nNodalOfficerName: \6\nMobileNo: \7\n/'
 
