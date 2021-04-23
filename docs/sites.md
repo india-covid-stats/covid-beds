@@ -2,7 +2,7 @@
 
 Region         | Site                                                                             | Scraped
 ---            | ---                                                                              | ---
-Bangalore*     | https://bbmpgov.com/chbms/                                                       | yes
+Bengaluru*     | https://bbmpgov.com/chbms/                                                       | yes
 Tamil Nadu     | https://stopcorona.tn.gov.in/beds.php                                            | yes
 Nagpur*        | https://nsscdcl.org/covidbeds/AvailableHospitals.jsp                             | yes
 Durg*          | https://durg.gov.in/covidbedsdurg/                                               | no
