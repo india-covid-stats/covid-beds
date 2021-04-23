@@ -2,7 +2,7 @@
 
 Region | Site | Scraped
 ---    | ---  | ---
-Bangalore      | https://bbmpgov.com/chbms/ | yes
+Bangalore*      | https://bbmpgov.com/chbms/ | yes
 Tamil Nadu     | https://stopcorona.tn.gov.in/beds.php | yes
 Nagpur         | https://nsscdcl.org/covidbeds/AvailableHospitals.jsp | yes
 Durg           | https://durg.gov.in/covidbedsdurg/ | no
@@ -13,3 +13,9 @@ Delhi          | https://coronabeds.jantasamvad.org/beds.html | yes
 Solapur        | http://117.247.89.137:85/ | no
 Gujarat        | https://www.gujaratcovidsupport.org/ | no
 Surat          | http://office.suratsmartcity.com/SuratCOVID19/Home/COVID19BedAvailabilitydetails | no
+Kerala         | https://covid19jagratha.kerala.nic.in/home/addHospitalDashBoard | no
+Chattisgarh    | https://cg.nic.in/health/covid19/RTPBedAvailable.aspx | no
+Ludhiana*      | http://hbmsludhiana.in/ | no
+Jabalpur*      | https://jbp.covidstatistics.in/ | no
+Vedodara city*  | https://vmc.gov.in/Covid19VadodaraApp/Default.aspx | yes
+> *not a state
