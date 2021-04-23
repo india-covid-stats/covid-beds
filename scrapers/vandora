@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case $1 in
+	'')	tid=1;;
+	o)	tid=4;;
+	i)	tid=6;;
+	m)	tid=5;;
+esac
+
+curl -s "https://vmc.gov.in/Covid19VadodaraApp/HospitalBedsDetails.aspx?tid=$tid" | sed  -E '
+/^[[:space:]]*<td align="left" width="200">/!d
+s/<[^>]*>/:/g
+s/::*/:/g
+s/^[[:space:]]*://
+s/^([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):([^:]*):.*/Hospital: \1\nAddress: \2\nTotal: \3\nOccupied: \4\nVacant: \5\nNodal Officer Name: \6\nMobile No: \7\n/'
+
