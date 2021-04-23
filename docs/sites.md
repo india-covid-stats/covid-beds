@@ -13,3 +13,7 @@ Delhi          | https://coronabeds.jantasamvad.org/beds.html
 Solapur        | http://117.247.89.137:85/
 Gujarat        | https://www.gujaratcovidsupport.org/
 Kerala         | https://covid19jagratha.kerala.nic.in/home/addHospitalDashBoard
+Chattisgarh    | https://cg.nic.in/health/covid19/RTPBedAvailable.aspx
+Ludhiana*      | http://hbmsludhiana.in/
+Jabalpur*      | https://jbp.covidstatistics.in/
+*not a state
