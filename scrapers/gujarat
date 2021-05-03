@@ -1,0 +1,22 @@
+#!/bin/sh
+
+MainSite=$(curl -s "https://www.gujaratcovidsupport.org/static/js/main.5ff25e0a.chunk.js")
+[ $? -ne 0 ] && exit 1
+
+ApiKey=$(printf "%s" "$MainSite" | grep -o "apiKey:\"[^\"]*" )
+ApiKey=${ApiKey#*\"}
+
+SpreadSheetId=$(printf "%s" "$MainSite" | grep -o "spreadsheetId:\"[^\"]*" )
+SpreadSheetId=${SpreadSheetId#*\"}
+
+Url="https://content-sheets.googleapis.com/v4/spreadsheets/$SpreadSheetId/values/Covid%20Care%20Center!A3%3AJ?key=$ApiKey"
+
+curl -s "$Url" |  tee test | jq -r '.values|.[]|
+	"
+Hospital: \(.[2]|gsub("\n";". ")?)
+Region: \(.[1]|gsub("\n";". ")?)
+PhoneNo: \(.[5]|gsub("\n";". ")?)
+Vacant: \(if ( .[7] == "Available" ) then "1" else "0" end)
+Update: \(.[9]|gsub("\n";" ")?)"'
+
+#Remarks: \(.[6]|gsub("\n";". "))
