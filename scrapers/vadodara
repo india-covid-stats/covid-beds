@@ -1,0 +1,23 @@
+#!/bin/sh
+
+usage()
+{
+	printf "Use: \n    -a for all beds,\n    -i for ICU beds,\n    -o for O2 Supply beds,\n    -m for Mild Symptomatic cases bed"
+}
+noargs="true";
+
+while getopts aiomh flag
+do
+	case "${flag}" in
+		a)echo "$(curl https://vmc.gov.in/Covid19VadodaraApp/HospitalBedsDetails.aspx\?tid\=13 | pup 'table text{}' | sed '1,12d;/^[[:space:]]*$/d;' | sed '1~8 s/^/Hospital Name: /g;2~8 s/^/Hospital Address: /g;5~8 s/^/Vacant Seats: /g;6~8 s/^/Nodal Officer Name: /g;7~8 s/^/Mobile no: /g; 0~8 s/^/Cluster Name: /g;0~8 s|$|\n|g;')";;
+		i)curl https://vmc.gov.in/Covid19VadodaraApp/HospitalBedsDetails.aspx\?tid\=63 | pup 'table text{}' | sed '1,12d;/^[[:space:]]*$/d;' | sed '1~8 s/^/Hospital Name: /g;2~8 s/^/Hospital Address: /g;5~8 s/^/Vacant Seats: /g;6~8 s/^/Nodal Officer Name: /g;7~8 s/^/Mobile no: /g; 0~8 s/^/Cluster Name: /g;0~8 s|$|\n|g;';;
+		o)curl https://vmc.gov.in/Covid19VadodaraApp/HospitalBedsDetails.aspx\?tid\=43 | pup 'table text{}' | sed '1,12d;/^[[:space:]]*$/d;' | sed '1~8 s/^/Hospital Name: /g;2~8 s/^/Hospital Address: /g;5~8 s/^/Vacant Seats: /g;6~8 s/^/Nodal Officer Name: /g;7~8 s/^/Mobile no: /g; 0~8 s/^/Cluster Name: /g;0~8 s|$|\n|g;';;
+		m)curl https://vmc.gov.in/Covid19VadodaraApp/HospitalBedsDetails.aspx\?tid\=53 | pup 'table text{}' | sed '1,12d;/^[[:space:]]*$/d;' | sed '1~8 s/^/Hospital Name: /g;2~8 s/^/Hospital Address: /g;5~8 s/^/Vacant Seats: /g;6~8 s/^/Nodal Officer Name: /g;7~8 s/^/Mobile no: /g; 0~8 s/^/Cluster Name: /g;0~8 s|$|\n|g;' ;;
+		*)usage;;
+		
+
+	esac
+	noargs="false"
+done
+
+[[ "$noargs" == "true" ]] && { usage; exit 1; }
